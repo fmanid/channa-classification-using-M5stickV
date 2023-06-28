@@ -123,7 +123,7 @@ if but_a.value() == 0: #If dont want to run the demo
     sys.exit()
 initialize_camera()
 
-labels = ['andrao','asiatica','auranti','limbata','maru','pulchra','red','stewarti']
+labels = ['Ikan Channa Andrao','Ikan Channa Asiatica','Ikan Channa Auranti','Ikan Channa Limbata','Ikan Channa Maru','Ikan Channa Pulchra','Ikan Channa Red','Ikan Channa Stewarti']
 task = kpu.load("/sd/model.kmodel")
 
 print('[info]: Started.')
@@ -145,10 +145,10 @@ try:
         #t = time.ticks_ms()
         #t = time.ticks_ms() - t
         #print(max_id,pmax)
-        if pmax > 0.75:
+        if pmax > 0.60:
             max_id=plist.index(pmax)
             print(labels[max_id])
-            img.draw_string(80,130, labels[max_id],color=(51,255,51), scale=2)
+            img.draw_string(0,160, labels[max_id],color=(51,255,51), scale=1.4)
             #img.draw_string(50, 50, text, color=(119,48,48), scale=2,mono_space=False)
 
             #img.draw_string(50, 50, text, color=(119,48,48), scale=2,mono_space=False)
